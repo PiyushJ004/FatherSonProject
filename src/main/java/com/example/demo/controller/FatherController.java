@@ -48,11 +48,6 @@ public class FatherController {
 		Father fathertodb = fatherservice.registerFather(father);
 		return new ResponseEntity<Father>(fathertodb, HttpStatus.CREATED);
 	}
-
-	/*
-	/get/2?fatherName=raju
-	 * 
-	 * */
 	
 	@GetMapping(path = "/get/{id}}")
 	public ResponseEntity<?> getfatherbyid(@PathVariable(value="id") Long id, @RequestParam(value="fatherName") String fatherName) {
