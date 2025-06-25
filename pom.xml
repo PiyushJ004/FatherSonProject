@@ -457,6 +457,10 @@
                     				<configuration>
                         				<!-- This generates the report in the 'target/site' folder -->
                         				<outputDirectory>${project.build.directory}/site/jacoco</outputDirectory>
+							<formats>
+              							<format>html</format> <!-- HTML report -->
+              							<format>json</format> <!-- JSON report -->
+            						</formats>
                     				</configuration>
                 			</execution>
             			</executions>
