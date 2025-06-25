@@ -445,6 +445,23 @@
         			</configuration>
     			</plugin>
 			<plugin>
+            			<groupId>org.jacoco</groupId>
+            			<artifactId>jacoco-maven-plugin</artifactId>
+            			<version>0.8.7</version>  <!-- Make sure you use the latest version -->
+           			 <executions>
+                			<execution>
+                    				<goals>
+                        				<goal>prepare-agent</goal>
+                        				<goal>report</goal>
+                    				</goals>
+                    				<configuration>
+                        				<!-- This generates the report in the 'target/site' folder -->
+                        				<outputDirectory>${project.build.directory}/site/jacoco</outputDirectory>
+                    				</configuration>
+                			</execution>
+            			</executions>
+        		</plugin>
+			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 			</plugin>
 		</plugins>
